@@ -11,7 +11,6 @@ export default function HztalImgPanor() {
   const containerRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
-  const [isMobile, setIsMobile] = useState(false)
 
   const updateDimensions = () => {
     if (containerRef.current) {
@@ -31,7 +30,6 @@ export default function HztalImgPanor() {
       }
 
       setDimensions({ width, height })
-      setIsMobile(window.innerWidth < 768) // Adjust this breakpoint as needed
     }
   }
 
@@ -45,7 +43,7 @@ export default function HztalImgPanor() {
   useEffect(() => {
     let ctx: gsap.Context
 
-    if (containerRef.current && imageRef.current && dimensions.width > 0 && !isMobile) {
+    if (containerRef.current && imageRef.current && dimensions.width > 0) {
       ctx = gsap.context(() => {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -69,14 +67,14 @@ export default function HztalImgPanor() {
     return () => {
       if (ctx) ctx.revert()
     }
-  }, [dimensions, isMobile])
+  }, [dimensions])
 
   return (
     <div ref={containerRef} className="w-screen h-screen overflow-hidden">
       <div 
         ref={imageRef} 
         className="h-full relative"
-        style={{ width: isMobile ? '100%' : `${dimensions.width}px` }}
+        style={{ width: `${dimensions.width}px` }}
       >
         <Image
           src="/images/panorama-completo.svg"
@@ -85,16 +83,6 @@ export default function HztalImgPanor() {
           style={{ objectFit: 'cover' }}
           quality={100}
           priority
-          className="hidden md:block" // Hide on mobile
-        />
-        <Image
-          src="/images/panorama-completo-mobile.svg"
-          alt="Panoramic view (mobile)"
-          fill
-          style={{ objectFit: 'cover' }}
-          quality={100}
-          priority
-          className="block md:hidden" // Show only on mobile
         />
       </div>
     </div>
