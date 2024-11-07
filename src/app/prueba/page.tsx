@@ -77,7 +77,7 @@ export default function HztalImgPanor() {
         style={{ width: `${dimensions.width}px` }}
       >
         <Image
-          src="/images/panorama-completo.png"
+          src="/images/panorama-completo.svg"
           alt="Panoramic view"
           fill
           style={{ objectFit: 'cover' }}
