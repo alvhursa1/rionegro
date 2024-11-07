@@ -71,7 +71,7 @@ const HztalScroll: React.FC = () => {
 
   const popupData = [
     {
-      title: "1 -Parque Principal",
+      title: "Parque Principal",
       content: "¡Comienza un recorrido mágico en familia por Rionegro! La primera parada es el Parque Principal, donde las luces brillantes y decoraciones festivas dan la bienvenida a la Navidad frente a nuestra Concatedral de San Nicolás el Magno. ¡No te lo pierdas y prepárate para la próxima parada!"
     },
     {
