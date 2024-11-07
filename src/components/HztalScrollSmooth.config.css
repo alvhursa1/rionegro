@@ -1,0 +1,21 @@
+.subsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .subsection > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .subsection img {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }

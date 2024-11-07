@@ -9,6 +9,7 @@ import TrainAnimado from "./TrainAnimado";
 import TrainFijo from "./TrainFijo";
 import Hder from "./Hder";
 import PopupWindow from "./PopupWindow";
+import "./HztalScrollSmooth.config.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,7 @@ const HztalScroll: React.FC = () => {
 
   const popupData = [
     {
-      title: "Parque Principal",
+      title: "1 -Parque Principal",
       content: "¡Comienza un recorrido mágico en familia por Rionegro! La primera parada es el Parque Principal, donde las luces brillantes y decoraciones festivas dan la bienvenida a la Navidad frente a nuestra Concatedral de San Nicolás el Magno. ¡No te lo pierdas y prepárate para la próxima parada!"
     },
     {
@@ -92,17 +93,18 @@ const HztalScroll: React.FC = () => {
         style={{ willChange: 'transform' }}
       >
         {['Slider-1', 'Slider-2', 'Slider-3'].map((slide, index) => (
-          <div key={slide} className="subsection w-screen h-full flex-shrink-0 relative">
+          <div key={slide} className="subsection w-screen h-screen flex-shrink-0 relative overflow-hidden">
             <Image
               src={`/images/${slide}.svg`}
-              alt={`SVG Fullscreen ${index + 1}`}
+              alt={`SVG Pantalla completa ${index + 1}`}
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               quality={100}
               priority={index === 0}
+              className="w-full h-full"
             />
             {/* Imagen superpuesta */}
-{/*             <Image
+            {/*             <Image
               src={`/images/Frente-A${index + 1}.png`}
               alt={`Frente A${index + 1}`}
               layout="fill"
@@ -140,7 +142,7 @@ const HztalScroll: React.FC = () => {
       </>
 
       {/* Contenedor para el fondo, logo, texto y botón */}
-      <div 
+      <div
         ref={initialContentRef}
         className={`fixed top-0 left-0 pb-[10%] w-full h-full bg-[#74131f] z-60 flex flex-col items-center justify-center transition-opacity duration-1000 ${isScrollActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       >
@@ -154,9 +156,9 @@ const HztalScroll: React.FC = () => {
           />
         </div>
         <p className="text-white text-[1.5rem] font-['MinionPro-Regular'] mb-8 text-center px-4 max-w-2xl">
-        La Ruta de la Navidad trae la <br />
-        mejor experiencia de Rionegro <br />
-        para disfrutar en familia 
+          La Ruta de la Navidad trae la <br />
+          mejor experiencia de Rionegro <br />
+          para disfrutar en familia
         </p>
         <button
           onClick={handleEnterClick}
