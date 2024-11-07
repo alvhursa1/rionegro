@@ -91,18 +91,18 @@ const HztalScroll: React.FC = () => {
         className={`track-h flex text-black w-[300vw] h-full ${isScrollActive ? '' : 'pointer-events-none'}`}
         style={{ willChange: 'transform' }}
       >
-        {['Slide-1', 'Slide-2', 'Slide-3'].map((slide, index) => (
+        {['Slider-1', 'Slider-2', 'Slider-3'].map((slide, index) => (
           <div key={slide} className="subsection w-screen h-full flex-shrink-0 relative">
             <Image
-              src={`/images/${slide}.png`}
+              src={`/images/${slide}.svg`}
               alt={`SVG Fullscreen ${index + 1}`}
               layout="fill"
-              objectFit="top"
+              objectFit="contain"
               quality={100}
               priority={index === 0}
             />
             {/* Imagen superpuesta */}
-            <Image
+{/*             <Image
               src={`/images/Frente-A${index + 1}.png`}
               alt={`Frente A${index + 1}`}
               layout="fill"
@@ -110,7 +110,7 @@ const HztalScroll: React.FC = () => {
               quality={100}
               priority={index === 0}
               className="z-10"
-            />
+            /> */}
           </div>
         ))}
       </div>
