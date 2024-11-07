@@ -81,6 +81,7 @@ export default function HztalImgPanor() {
           alt="Panoramic view"
           fill
           style={{ objectFit: 'cover' }}
+          quality={100}
           priority
         />
       </div>
