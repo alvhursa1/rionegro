@@ -21,12 +21,41 @@ const HztalScroll: React.FC = () => {
   const [showAnimatedTrain, setShowAnimatedTrain] = useState(false);
   const [showHder, setShowHder] = useState(false);
   const [activePopup, setActivePopup] = useState(0);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  const updateDimensions = () => {
+    if (containerRef.current) {
+      const aspectRatio = 5760 / 1080; // Aspect ratio of the panoramic image
+      const containerWidth = containerRef.current.clientWidth;
+      const containerHeight = containerRef.current.clientHeight;
+      const containerAspectRatio = containerWidth / containerHeight;
+
+      let width, height;
+
+      if (containerAspectRatio > aspectRatio) {
+        width = containerWidth;
+        height = width / aspectRatio;
+      } else {
+        height = containerHeight;
+        width = height * aspectRatio;
+      }
+
+      setDimensions({ width, height });
+    }
+  };
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
     const container = containerRef.current;
 
-    if (track && container && isScrollActive) {
+    if (track && container && isScrollActive && dimensions.width > 0) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
@@ -34,7 +63,7 @@ const HztalScroll: React.FC = () => {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: () => `+=${track.scrollWidth - document.documentElement.clientWidth}`,
+          end: () => `+=${dimensions.width - container.clientWidth}`,
           onUpdate: (self) => {
             const progress = self.progress;
             if (progress < 0.33) {
@@ -49,11 +78,11 @@ const HztalScroll: React.FC = () => {
       });
 
       tl.to(track, {
-        x: () => `-${track.scrollWidth - document.documentElement.clientWidth}px`,
+        x: () => -(dimensions.width - container.clientWidth),
         ease: "none",
       });
     }
-  }, [isScrollActive]);
+  }, [isScrollActive, dimensions]);
 
   const handleEnterClick = () => {
     if (initialContentRef.current) {
@@ -89,32 +118,20 @@ const HztalScroll: React.FC = () => {
       {/* Contenedor principal para el scroll horizontal */}
       <div
         ref={trackRef}
-        className={`track-h flex text-black w-[300vw] h-full ${isScrollActive ? '' : 'pointer-events-none'}`}
-        style={{ willChange: 'transform' }}
+        className={`track-h flex text-black h-full ${isScrollActive ? '' : 'pointer-events-none'}`}
+        style={{ width: `${dimensions.width}px`, willChange: 'transform' }}
       >
-        {['Slider-1', 'Slider-2', 'Slider-3'].map((slide, index) => (
-          <div key={slide} className="subsection w-screen h-screen flex-shrink-0 relative overflow-hidden">
-            <Image
-              src={`/images/${slide}.svg`}
-              alt={`SVG Pantalla completa ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-              priority={index === 0}
-              className="w-full h-full"
-            />
-            {/* Imagen superpuesta */}
-            {/*             <Image
-              src={`/images/Frente-A${index + 1}.png`}
-              alt={`Frente A${index + 1}`}
-              layout="fill"
-              objectFit="button"
-              quality={100}
-              priority={index === 0}
-              className="z-10"
-            /> */}
-          </div>
-        ))}
+        <div className="w-full h-full relative overflow-hidden">
+          <Image
+            src="/images/panorama-completo-1080.svg"
+            alt="Panoramic view"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority
+            className="w-full h-full"
+          />
+        </div>
       </div>
 
       {/* Popup Windows */}
