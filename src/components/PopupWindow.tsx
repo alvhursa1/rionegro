@@ -26,7 +26,7 @@ const PopupWindow: React.FC<PopupWindowProps> = ({ title, content, isActive }) =
   return (
     <div 
       ref={popupRef} 
-      className="fixed right-8 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-85 p-8 rounded-lg shadow-lg w-96 z-50"
+      className="fixed right-8 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-85 p-8 rounded-lg shadow-lg w-96 z-30"
       style={{ opacity: 0 }} // Inicialmente oculto
     >
       <h2 className="text-[1.875rem] font-['MinionItalic'] mb-4 text-[#74131f]">{title}</h2>
