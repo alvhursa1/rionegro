@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function HztalImgPanor() {
+export default function HorizontalImagePanorama() {
   const containerRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
@@ -49,7 +49,7 @@ export default function HztalImgPanor() {
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top top',
-            end: () => `+=${dimensions.width - window.innerWidth}`,
+            end: () => `+=${dimensions.width}`,
             scrub: true,
             pin: true,
             anticipatePin: 1,
@@ -58,7 +58,7 @@ export default function HztalImgPanor() {
         })
 
         tl.to(imageRef.current, {
-          x: () => -(dimensions.width - window.innerWidth),
+          x: () => -(dimensions.width - containerRef.current!.clientWidth),
           ease: 'none',
         })
       }, containerRef)
@@ -70,7 +70,7 @@ export default function HztalImgPanor() {
   }, [dimensions])
 
   return (
-    <div ref={containerRef} className="w-screen h-screen overflow-hidden">
+    <div ref={containerRef} className="w-full h-screen overflow-hidden">
       <div 
         ref={imageRef} 
         className="h-full relative"
