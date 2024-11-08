@@ -56,7 +56,7 @@ export default function Htra() {
   }, [currentSlide])
 
   return (
-    <div className="bg-[#74131f] text-white min-h-screen flex flex-col pt-[5%] pb-[3%] pl-[3%]">
+    <div className="bg-[#9a1616] text-white min-h-screen flex flex-col pt-[5%] pb-[3%] pl-[3%]">
       <div className="flex-grow flex">
         {/* Left column - Text */}
         <div className="w-1/2 pr-8 flex flex-col justify-center" ref={textRef}>

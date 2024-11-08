@@ -86,6 +86,7 @@ const Hder: React.FC = () => {
     <header className="absolute top-0 left-0 w-full z-50 bg-transparent">
       <div className="container mx-auto flex justify-between items-center">
         <div className="pl-[2%] pt-[2%]">
+        <Link href="/">
           <Image
             src="/images/Logo-rionegro-blanco.svg"
             alt="Logo Rionegro"
@@ -93,6 +94,7 @@ const Hder: React.FC = () => {
             height={50}
             priority
           />
+        </Link>
         </div>
         <div className="pr-[2%] flex items-center space-x-4">
           <Link 

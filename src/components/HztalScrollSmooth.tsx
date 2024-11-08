@@ -61,7 +61,7 @@ const HztalScroll: React.FC = () => {
           trigger: container,
           invalidateOnRefresh: true,
           pin: true,
-          scrub: 1,
+          scrub: 4, // Increased from 1 to 2 for smoother scrolling
           start: "top top",
           end: () => `+=${dimensions.width - container.clientWidth}`,
           onUpdate: (self) => {
@@ -79,7 +79,8 @@ const HztalScroll: React.FC = () => {
 
       tl.to(track, {
         x: () => -(dimensions.width - container.clientWidth),
-        ease: "none",
+        ease: "power1.out", // Changed from "none" to "power1.out" for smoother movement
+        duration: 1, // Added duration to slow down the animation
       });
     }
   }, [isScrollActive, dimensions]);
@@ -100,16 +101,16 @@ const HztalScroll: React.FC = () => {
 
   const popupData = [
     {
-      title: "Parque Principal",
-      content: "¡Comienza un recorrido mágico en familia por Rionegro! La primera parada es el Parque Principal, donde las luces brillantes y decoraciones festivas dan la bienvenida a la Navidad frente a nuestra Concatedral de San Nicolás el Magno. ¡No te lo pierdas y prepárate para la próxima parada!"
+      title: "Parque Plaza La Libertad",
+      content: "¡Comienza un recorrido mágico en familia por Rionegro! La primera parada es el Parque Principal, donde las luces brillantes y decoraciones festivas dan la bienvenida a la Navidad frente a nuestra Concatedral de San Nicolás el Magno. ¡No te lo pierdas!"
     },
     {
       title: "Calle Alcaldía",
-      content: "donde la magia de la Navidad cobra vida. Este emblemático lugar se llena de luces brillantes, música festiva y actividades emocionantes para toda la familia. Disfruta de un ambiente alegre para crear recuerdos inolvidables mientras recorres con amigos y seres queridos. Ven a vivir la esencia de la Navidad en el corazón de Rionegro y celebra con nosotros esta temporada de alegría y unión."
+      content: "Donde la magia de la Navidad cobra vida. Disfruta de un ambiente alegre con luces, música y amor para crear recuerdos inolvidables mientras recorres con amigos y seres queridos. Ven a vivir la esencia de la Navidad en el corazón de Rionegro y celebra con nosotros esta temporada de alegría."
     },
     {
       title: "Paisajes del Agua",
-      content: "La siguiente parada es Paisajes del Agua, una experiencia navideña junto al río que ilumina la noche con un hermoso espectáculo de luces. Aquí, podrás explorar un encantador mercadillo navideño, disfrutar de delicias locales y dejarte envolver por la magia del entorno. ¡Ven a celebrar con nosotros y vive una experiencia inolvidable en esta nueva zona de Rionegro!"
+      content: "Paisajes del Agua, una experiencia navideña junto al río que ilumina la noche con un hermoso espectáculo de luces. Aquí, podrás explorar un encantador mercadillo navideño, disfrutar de delicias locales y dejarte envolver por la magia del entorno. ¡Ven a celebrar con nosotros y vive una experiencia inolvidable en esta nueva zona de Rionegro!"
     }
   ];
 
@@ -152,7 +153,7 @@ const HztalScroll: React.FC = () => {
           </div>
         )}
         <div className="fixed bottom-0 left-0 w-full h-full pointer-events-none z-40">
-          <div className="absolute bottom-[8%] left-[3%] w-1/3 h-1/3 z-0">
+          <div className="absolute bottom-[14%] left-[3%] w-1/3 h-1/3 z-0">
             {showAnimatedTrain ? <TrainAnimado /> : <TrainFijo />}
           </div>
         </div>
@@ -172,10 +173,10 @@ const HztalScroll: React.FC = () => {
             priority
           />
         </div>
-        <p className="text-white text-[1.5rem] font-['MinionPro-Regular'] mb-8 text-center px-4 max-w-2xl">
-          La Ruta de la Navidad trae la <br />
-          mejor experiencia de Rionegro <br />
-          para disfrutar en familia
+        <p className="text-white text-[1.125rem] leading-[1.25rem] font-['MinionPro-Regular'] mb-8 text-center px-4 max-w-2xl">
+          La Ruta de la Navidad te invita <br />
+          a vivir la mejor experiencia de <br />
+          Rionegro en familia
         </p>
         <button
           onClick={handleEnterClick}
