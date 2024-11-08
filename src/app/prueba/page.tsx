@@ -14,7 +14,7 @@ export default function HztalImgPanor() {
 
   const updateDimensions = () => {
     if (containerRef.current) {
-      const aspectRatio = 11521 / 2160 // Aspect ratio of the original image
+      const aspectRatio = 5760 / 1080 // Aspect ratio of the original image
       const containerWidth = containerRef.current.clientWidth
       const containerHeight = containerRef.current.clientHeight
       const containerAspectRatio = containerWidth / containerHeight
