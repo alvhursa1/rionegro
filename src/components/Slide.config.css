@@ -1,0 +1,689 @@
+.slide1-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #0a1f44; /* Fondo oscuro para el cielo nocturno */
+  }
+  
+  .christmas-village {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Colores para los elementos SVG */
+  #Estrellas {
+    fill: #ffffff;
+  }
+  
+  #Luna {
+    fill: #ffd700;
+  }
+  
+  [id^="Luzrojarbol"], [id^="Luzrojoarco"] {
+    fill: #ff0000;
+  }
+  
+  [id^="Luzverdearbol"] {
+    fill: #00ff00;
+  }
+  
+  [id^="Luznaranjaarco"] {
+    fill: #ffa500;
+  }
+  
+  #EstrellaArbol {
+    fill: #ffff00;
+  }
+  
+  #Campana {
+    fill: #ffd700;
+  }
+  
+  [id^="BolaAzul"] {
+    fill: #0000ff;
+  }
+  
+  [id^="BolaNaranja"] {
+    fill: #ffa500;
+  }
+  
+  [id^="BolaAmarilla"] {
+    fill: #ffff00;
+  }
+
+  .st0 {
+    clip-path: url(#clippath-76);
+  }
+  
+  .st1 {
+    fill: #583d35;
+  }
+  
+  .st2 {
+    clip-path: url(#clippath-51);
+  }
+  
+  .st3 {
+    clip-path: url(#clippath-34);
+  }
+  
+  .st4 {
+    fill: #0b172d;
+  }
+  
+  .st5 {
+    clip-path: url(#clippath-38);
+  }
+  
+  .st6 {
+    clip-path: url(#clippath-21);
+  }
+  
+  .st7 {
+    clip-path: url(#clippath-6);
+  }
+  
+  .st8 {
+    clip-path: url(#clippath-7);
+  }
+  
+  .st9 {
+    clip-path: url(#clippath-17);
+  }
+  
+  .st10 {
+    clip-path: url(#clippath-80);
+  }
+  
+  .st11 {
+    clip-path: url(#clippath-31);
+  }
+  
+  .st12 {
+    clip-path: url(#clippath-79);
+  }
+  
+  .st13 {
+    clip-path: url(#clippath-75);
+  }
+  
+  .st14 {
+    clip-path: url(#clippath-15);
+  }
+  
+  .st15 {
+    clip-path: url(#clippath-33);
+  }
+  
+  .st16 {
+    clip-path: url(#clippath-61);
+  }
+  
+  .st17 {
+    clip-path: url(#clippath-18);
+  }
+  
+  .st18 {
+    clip-path: url(#clippath-47);
+  }
+  
+  .st19 {
+    clip-path: url(#clippath-4);
+  }
+  
+  .st20 {
+    fill: #6b544f;
+  }
+  
+  .st21 {
+    clip-path: url(#clippath-71);
+  }
+  
+  .st22 {
+    fill: #6d7c52;
+  }
+  
+  .st23 {
+    fill: #2f2e41;
+  }
+  
+  .st24 {
+    clip-path: url(#clippath-22);
+  }
+  
+  .st25 {
+    clip-path: url(#clippath-23);
+  }
+  
+  .st26 {
+    fill: #94646b;
+  }
+  
+  .st27 {
+    fill: #234242;
+  }
+  
+  .st28 {
+    fill: #eae4da;
+  }
+  
+  .st29 {
+    clip-path: url(#clippath-54);
+  }
+  
+  .st30 {
+    clip-path: url(#clippath-66);
+  }
+  
+  .st31 {
+    fill: #f9f2e5;
+  }
+  
+  .st32 {
+    fill: #ede6da;
+  }
+  
+  .st33 {
+    clip-path: url(#clippath-9);
+  }
+  
+  .st34 {
+    clip-path: url(#clippath-70);
+  }
+  
+  .st35 {
+    clip-path: url(#clippath-10);
+  }
+  
+  .st36 {
+    clip-path: url(#clippath-42);
+  }
+  
+  .st37 {
+    stroke: #4f3e3b;
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
+  }
+  
+  .st37,
+  .st38 {
+    fill: none;
+  }
+  
+  .st39 {
+    clip-path: url(#clippath-59);
+  }
+  
+  .st40,
+  .st41 {
+    fill: #fff;
+  }
+  
+  .st42 {
+    clip-path: url(#clippath-43);
+  }
+  
+  .st43 {
+    clip-path: url(#clippath-64);
+  }
+  
+  .st44 {
+    fill: #f6d67c;
+  }
+  
+  .st45 {
+    clip-path: url(#clippath-25);
+  }
+  
+  .st46 {
+    fill: #4f3e3b;
+  }
+  
+  .st47 {
+    clip-path: url(#clippath-27);
+  }
+  
+  .st48 {
+    fill: #f3b8b7;
+  }
+  
+  .st49 {
+    fill: #ebd4ce;
+  }
+  
+  .st50 {
+    clip-path: url(#clippath-60);
+  }
+  
+  .st41 {
+    fill-rule: evenodd;
+  }
+  
+  .st51 {
+    clip-path: url(#clippath-11);
+  }
+  
+  .st52 {
+    clip-path: url(#clippath-57);
+  }
+  
+  .st53 {
+    clip-path: url(#clippath-36);
+  }
+  
+  .st54 {
+    fill: #9b8e86;
+  }
+  
+  .st55 {
+    fill: #e5e5e5;
+  }
+  
+  .st56 {
+    clip-path: url(#clippath-35);
+  }
+  
+  .st57 {
+    fill: #3f3d56;
+  }
+  
+  .st58 {
+    clip-path: url(#clippath-48);
+  }
+  
+  .st59 {
+    clip-path: url(#clippath-28);
+  }
+  
+  .st60 {
+    fill: #f2b0af;
+  }
+  
+  .st61 {
+    fill: #0b1941;
+  }
+  
+  .st62 {
+    fill: #b4af3e;
+  }
+  
+  .st63 {
+    fill: #f9f5ca;
+  }
+  
+  .st64 {
+    opacity: 0.6;
+  }
+  
+  .st65 {
+    fill: #726e6d;
+  }
+  
+  .st66 {
+    fill: #f1bfbe;
+  }
+  
+  .st67 {
+    fill: #96646b;
+  }
+  
+  .st68 {
+    clip-path: url(#clippath-1);
+  }
+  
+  .st69 {
+    fill: #15254c;
+  }
+  
+  .st70 {
+    clip-path: url(#clippath-56);
+  }
+  
+  .st71 {
+    fill: #694a44;
+  }
+  
+  .st72 {
+    fill: #cfd1d4;
+  }
+  
+  .st73 {
+    fill: #997971;
+  }
+  
+  .st74 {
+    fill: #003739;
+  }
+  
+  .st75 {
+    fill: #1f1f1f;
+  }
+  
+  .st76 {
+    fill: #f2c7bf;
+  }
+  
+  .st77 {
+    clip-path: url(#clippath-45);
+  }
+  
+  .st78 {
+    fill: #ffecc3;
+  }
+  
+  .st79 {
+    clip-path: url(#clippath-46);
+  }
+  
+  .st80 {
+    clip-path: url(#clippath-40);
+  }
+  
+  .st81 {
+    fill: #e6a5a7;
+  }
+  
+  .st82 {
+    clip-path: url(#clippath-5);
+  }
+  
+  .st83 {
+    clip-path: url(#clippath-20);
+  }
+  
+  .st84 {
+    clip-path: url(#clippath-8);
+  }
+  
+  .st85 {
+    isolation: isolate;
+  }
+  
+  .st85,
+  .st86 {
+    opacity: 0.1;
+  }
+  
+  .st87 {
+    clip-path: url(#clippath-52);
+  }
+  
+  .st88 {
+    clip-path: url(#clippath-41);
+  }
+  
+  .st89 {
+    fill: #dbdbdb;
+  }
+  
+  .st90 {
+    clip-path: url(#clippath-67);
+  }
+  
+  .st91 {
+    clip-path: url(#clippath-74);
+  }
+  
+  .st92 {
+    fill: #ddb78d;
+  }
+  
+  .st93 {
+    clip-path: url(#clippath-3);
+  }
+  
+  .st94 {
+    fill: #e5cfa3;
+  }
+  
+  .st95 {
+    clip-path: url(#clippath-26);
+  }
+  
+  .st96 {
+    fill: #c6976b;
+  }
+  
+  .st97 {
+    fill: #2f2e40;
+  }
+  
+  .st98 {
+    fill: #f8f2e6;
+  }
+  
+  .st99 {
+    fill: #3f3d54;
+  }
+  
+  .st100 {
+    clip-path: url(#clippath-12);
+  }
+  
+  .st101 {
+    clip-path: url(#clippath-50);
+  }
+  
+  .st102 {
+    fill: #e5b163;
+  }
+  
+  .st103 {
+    clip-path: url(#clippath-14);
+  }
+  
+  .st104 {
+    fill: #ddd;
+  }
+  
+  .st105 {
+    fill: #cf6796;
+  }
+  
+  .st106 {
+    fill: #466665;
+  }
+  
+  .st107 {
+    clip-path: url(#clippath-30);
+  }
+  
+  .st108 {
+    clip-path: url(#clippath-77);
+  }
+  
+  .st109 {
+    clip-path: url(#clippath-19);
+  }
+  
+  .st110 {
+    fill: #bb5333;
+  }
+  
+  .st111 {
+    clip-path: url(#clippath-78);
+  }
+  
+  .st112 {
+    clip-path: url(#clippath-72);
+  }
+  
+  .st113 {
+    fill: #efe8df;
+  }
+  
+  .st114 {
+    clip-path: url(#clippath-32);
+  }
+  
+  .st115 {
+    fill: #f7c18f;
+  }
+  
+  .st116 {
+    fill: #f0c9bb;
+  }
+  
+  .st117 {
+    fill: #821d1d;
+  }
+  
+  .st118 {
+    clip-path: url(#clippath-55);
+  }
+  
+  .st119 {
+    fill: #d4a550;
+  }
+  
+  .st120 {
+    fill: #74131f;
+  }
+  
+  .st121 {
+    fill: #295640;
+  }
+  
+  .st122 {
+    fill: #8b5e2d;
+  }
+  
+  .st123 {
+    clip-path: url(#clippath-73);
+  }
+  
+  .st124 {
+    clip-path: url(#clippath-53);
+  }
+  
+  .st125 {
+    clip-path: url(#clippath-39);
+  }
+  
+  .st126 {
+    fill: #886c64;
+  }
+  
+  .st127 {
+    fill: #ead7a7;
+  }
+  
+  .st128 {
+    clip-path: url(#clippath-81);
+  }
+  
+  .st129 {
+    fill: #4a352f;
+  }
+  
+  .st130 {
+    fill: #9a1616;
+  }
+  
+  .st131 {
+    clip-path: url(#clippath-16);
+  }
+  
+  .st132 {
+    clip-path: url(#clippath-2);
+  }
+  
+  .st133 {
+    fill: #dcdcdc;
+  }
+  
+  .st134 {
+    opacity: 0.6;
+  }
+  
+  .st135 {
+    clip-path: url(#clippath-29);
+  }
+  
+  .st136 {
+    fill: #59423e;
+  }
+  
+  .st137 {
+    clip-path: url(#clippath-49);
+  }
+  
+  .st138 {
+    fill: #304946;
+  }
+  
+  .st139 {
+    clip-path: url(#clippath-37);
+  }
+  
+  .st140 {
+    clip-path: url(#clippath-58);
+  }
+  
+  .st141 {
+    clip-path: url(#clippath-13);
+  }
+  
+  .st142 {
+    fill: #ebab6c;
+  }
+  
+  .st143 {
+    fill: #293456;
+  }
+  
+  .st144 {
+    fill: #fcecca;
+  }
+  
+  .st145 {
+    fill: #d9b080;
+  }
+  
+  .st146 {
+    clip-path: url(#clippath-63);
+  }
+  
+  .st147 {
+    clip-path: url(#clippath-24);
+  }
+  
+  .st148 {
+    fill: #fefaa4;
+  }
+  
+  .st149 {
+    clip-path: url(#clippath);
+  }
+  
+  .st150 {
+    fill: #f3b7b6;
+  }
+  
+  .st151 {
+    clip-path: url(#clippath-68);
+  }
+  
+  .st152 {
+    clip-path: url(#clippath-65);
+  }
+  
+  .st153 {
+    fill: #96765f;
+  }
+  
+  .st154 {
+    fill: #f2b1b0;
+  }
+  
+  .st155 {
+    clip-path: url(#clippath-44);
+  }
+  
+  .st156 {
+    clip-path: url(#clippath-62);
+  }
+  
+  .st157 {
+    clip-path: url(#clippath-69);
+  }
+  
