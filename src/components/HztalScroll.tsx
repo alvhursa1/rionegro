@@ -64,17 +64,17 @@ export default function SmoothHorizontalScrollPanorama() {
   const popupData = [
     {
       title: 'Parque Plaza La Libertad',
-      content: '¡Comienza un recorrido mágico en familia por Rionegro!...',
+      content: '¡Comienza un recorrido mágico en familia por Rionegro! La primera parada es el Parque Principal, donde las luces brillantes y decoraciones festivas dan la bienvenida a la Navidad frente a nuestra Concatedral de San Nicolás el Magno. ¡No te lo pierdas!',
       range: [0, 0.33],
     },
     {
       title: 'Calle Alcaldía',
-      content: 'Donde la magia de la Navidad cobra vida...',
+      content: 'Donde la magia de la Navidad cobra vida. Disfruta de un ambiente alegre con luces, música y amor para crear recuerdos inolvidables mientras recorres con amigos y seres queridos. Ven a vivir la esencia de la Navidad en el corazón de Rionegro y celebra con nosotros esta temporada de alegría.',
       range: [0.33, 0.66],
     },
     {
       title: 'Paisajes del Agua',
-      content: 'Paisajes del Agua, una experiencia navideña junto al río...',
+      content: 'Paisajes del Agua, una experiencia navideña junto al río que ilumina la noche con un hermoso espectáculo de luces. Aquí, podrás explorar un encantador mercadillo navideño, disfrutar de delicias locales y dejarte envolver por la magia del entorno. ¡Ven a celebrar con nosotros y vive una experiencia inolvidable en esta nueva zona de Rionegro!',
       range: [0.66, 1],
     },
   ];
