@@ -8,8 +8,8 @@ export default function Hstg() {
         <Image
           src="/images/QR.svg"
           alt="QR Code"
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           className="max-w-full h-auto"
         />
       </div>

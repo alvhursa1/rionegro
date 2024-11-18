@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function Prrfo1() {
   const componentRef = useRef(null);
@@ -23,14 +24,14 @@ export default function Prrfo1() {
 
   return (
     <div ref={componentRef} className="relative z-[100] flex flex-col md:flex-row bg-[#004141] min-h-screen text-[#fefaf1]">
-      <div className="column flex-1 flex items-center justify-center p-8 md:p-16">
+      <div className="column flex-1 flex-col justify-center mt-10 p-8 md:p-16">
         <h1 className="font-josefin text-[2rem] leading-tight text-start font-JosefinSans font-normal">
-          ¡Bienvenidos a la Navidad en <br />
-          Rionegro 2024!
+          La Ruta de la Navidad trae la <br />
+          mejor experiencia de Rionegro <br />
+          para disfrutar en familia
         </h1>
-      </div>
-      <div className="column flex-1 flex flex-col items-center justify-center p-8">
-        <p className="font-MinionPro text-[1.125rem] mb-4 md:mb-8 text-justify">
+
+        <p className="font-MinionPro text-[1.125rem] mb-4 pt-[5%] md:mb-8 text-justify">
           Este año, nuestra ciudad se viste de alegría y color para celebrar las tradiciones que nos unen. Desde los héroes rionegreros hasta el recorrido de luces, cada rincón de nuestra ciudad cobra vida. Únete a nosotros para celebrar la paz, la esperanza y la unión, recordando que Rionegro es la Cuna de la Libertad, un lugar donde los sueños y la solidaridad brillan con fuerza.
           ¡Te esperamos para vivir en familia la magia de la Navidad!
 
@@ -40,6 +41,16 @@ export default function Prrfo1() {
             Conoce más
           </button>
         </Link>
+
+      </div>
+      <div className="column flex-1 flex flex-col items-center justify-center p-8">
+      <Image
+          src="/images/Arbol-txt.png"
+          alt="QR Code"
+          width={400}
+          height={400}
+          className="max-w-full h-auto"
+        />
       </div>
     </div>
   );
