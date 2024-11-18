@@ -45,7 +45,7 @@ export default function Prrfo1() {
       </div>
       <div className="column flex-1 flex flex-col items-center justify-center p-8">
       <Image
-          src="/images/Arbol-txt.png"
+          src="/images/arbol-home.svg"
           alt="QR Code"
           width={400}
           height={400}
