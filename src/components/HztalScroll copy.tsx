@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState, useCallback, useMemo } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import TrainAnimado from './TrainAnimado';
@@ -61,7 +61,7 @@ export default function SmoothHorizontalScrollPanorama() {
     document.body.classList.remove('overflow-hidden'); // Enable scroll
   };
 
-  const popupData = useMemo(() => [
+  const popupData = [
     {
       title: 'Parque Plaza La Libertad',
       content: '¡Comienza un recorrido mágico en familia por Rionegro! La primera parada es el Parque Principal, donde las luces brillantes y decoraciones festivas dan la bienvenida a la Navidad frente a nuestra Concatedral de San Nicolás el Magno. ¡No te lo pierdas!',
@@ -77,7 +77,7 @@ export default function SmoothHorizontalScrollPanorama() {
       content: 'Paisajes del Agua, una experiencia navideña junto al río que ilumina la noche con un hermoso espectáculo de luces. Aquí, podrás explorar un encantador mercadillo navideño, disfrutar de delicias locales y dejarte envolver por la magia del entorno. ¡Ven a celebrar con nosotros y vive una experiencia inolvidable en esta nueva zona de Rionegro!',
       range: [0.66, 1],
     },
-  ], []);
+  ];
 
   useEffect(() => {
     if (!isScrollActive) {
@@ -86,17 +86,14 @@ export default function SmoothHorizontalScrollPanorama() {
     return () => document.body.classList.remove('overflow-hidden'); // Cleanup on unmount
   }, [isScrollActive]);
 
-  const updateActivePopupIndex = useCallback((progress: number) => {
-    const newIndex = popupData.findIndex(
-      (popup) => progress >= popup.range[0] && progress < popup.range[1]
-    );
-    setActivePopupIndex(newIndex);
-  }, []);
-
   useEffect(() => {
-    const unsubscribe = scrollYProgress.onChange(updateActivePopupIndex);
-    return () => unsubscribe();
-  }, [scrollYProgress, updateActivePopupIndex]);
+    scrollYProgress.onChange((progress) => {
+      const newIndex = popupData.findIndex(
+        (popup) => progress >= popup.range[0] && progress < popup.range[1]
+      );
+      setActivePopupIndex(newIndex);
+    });
+  }, [scrollYProgress]);
 
   const MobilePopupAccordion = () => {
     const [isExpanded, setIsExpanded] = useState(false);
