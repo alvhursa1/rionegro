@@ -35,7 +35,7 @@ export const CarruselEventos: React.FC = () => {
     : events;
 
   return (
-    <div className="relative z-[100] w-screen h-screen bg-[#fefaf1] text-[#004141] overflow-hidden">
+    <div className="relative z-[100] w-[100wh] h-screen bg-[#fefaf1] text-[#004141] overflow-hidden">
       <div className="  pl-[5%] pb-[5%]">
         <h1 className="text-2xl md:text-[2rem] font-JosefinSans mb-[3%] pt-[5%]">Eventos especiales</h1>
         <Select
